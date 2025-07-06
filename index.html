@@ -2,58 +2,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ecell Board</title>
+  <title>Ecell</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="bg-blue-100 text-blue-900">
-  <h1 class="text-center font-bold text-lg mt-4">Startup Ideas</h1>
+<body class="bg-blue-100 text-blue-900 text-center p-4">
 
-  <div class="p-3">
-    <!-- Submit Section at Top -->
-    <div class="bg-white p-3 mb-5 border">
-      <h2 class="text-md font-bold mb-2">Submit Your Idea</h2>
-      <form>
-        <input type="text" placeholder="Startup Name" class="border p-1 w-full mb-1">
-        <input type="text" placeholder="Pitch" class="border p-1 w-full mb-1">
-        <select class="border p-1 w-full mb-1">
-          <option>Category</option>
-          <option>Technology</option>
-          <option>Environment</option>
-          <option>Education</option>
-        </select>
-        <input type="email" placeholder="Email" class="border p-1 w-full mb-1">
-        <input type="url" placeholder="Website" class="border p-1 w-full mb-2">
-        <button type="submit" class="bg-blue-500 text-white px-3 py-1">Submit</button>
-      </form>
-    </div>
+  <h1 class="text-2xl font-bold mb-4">Ecell Innovation Board</h1>
 
-    <!-- Search and Filter -->
-    <input class="border p-1 w-full mb-2" placeholder="Search...">
-    <select class="border p-1 w-full mb-4">
-      <option>All Categories</option>
-      <option>Technology</option>
-      <option>Environment</option>
-      <option>Education</option>
+  <div class="max-w-md mx-auto">
+    <input class="border rounded w-full  mb-3" placeholder="Search">
+
+    <select class="border rounded w-full p-2 mb-6">
+      <option>All</option>
+      <option>Tech</option>
+      <option>Social</option>
+      <option>EdTech</option>
+      <option>FinTech</option>
+      <option>E-Commerce</option>
     </select>
 
-    <!-- Cards -->
-    <div class="bg-white p-2 mb-2 border">
-      <h2 class="font-semibold">NoteHelp</h2>
-      <p class="text-sm">Website to share notes</p>
-      <p class="text-xs">Education</p>
+    <!-- Card Section -->
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="bg-white p-3 rounded shadow">
+        <h2 class="font-semibold">EduTech</h2>
+        <p>Learning app</p>
+        <p class="text-sm">EdTech</p>
+        <a href="xyz1" class="text-blue-700 text-sm">View</a>
+      </div>
+
+      <div class="bg-white p-3 rounded shadow">
+        <h2 class="font-semibold">FarmConnect</h2>
+        <p>For farmers</p>
+        <p class="text-sm">Social</p>
+        <a href="xyz2" class="text-blue-700 text-sm">View</a>
+      </div>
+
+      <div class="bg-white p-3 rounded shadow">
+        <h2 class="font-semibold">CodeBolt</h2>
+        <p>Code together</p>
+        <p class="text-sm">Tech</p>
+        <a href="xyz3" class="text-blue-700 text-sm">View</a>
+      </div>
     </div>
 
-    <div class="bg-white p-2 mb-2 border">
-      <h2 class="font-semibold">TreeApp</h2>
-      <p class="text-sm">Plant trees by booking online</p>
-      <p class="text-xs">Environment</p>
-    </div>
-
-    <div class="bg-white p-2 mb-2 border">
-      <h2 class="font-semibold">EasyCode</h2>
-      <p class="text-sm">Simple courses for beginners</p>
-      <p class="text-xs">Technology</p>
+    <div class="bg-white p-4 mt-8 rounded shadow">
+      <h2 class="text-lg font-bold underline mb-3">Submit Your Idea</h2>
+      <form class="space-y-1">
+        <input type="text" placeholder="Startup Name" class="border rounded w-full p-2">
+        <input type="text" placeholder="Describe Your Idea" class="border rounded w-full p-2">
+        <select class="border rounded w-full p-2">
+          <option>Select Category</option>
+          <option>Tech</option>
+          <option>Social</option>
+          <option>EdTech</option>
+          <option>FinTech</option>
+          <option>E-Commerce</option>
+        </select>
+        <input type="email" placeholder="Contact Email" class="border rounded w-full p-2">
+        <input type="url" placeholder="Website (optional)" class="border rounded w-full p-2">
+        <button type="submit" class="bg-blue-500 text-white rounded w-full p-2">Submit</button>
+      </form>
     </div>
   </div>
+
 </body>
 </html>
