@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecell Board</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 text-blue-900">
+  <h1 class="text-center font-bold text-lg mt-4">Startup Ideas</h1>
+
+  <div class="p-3">
+    <!-- Submit Section at Top -->
+    <div class="bg-white p-3 mb-5 border">
+      <h2 class="text-md font-bold mb-2">Submit Your Idea</h2>
+      <form>
+        <input type="text" placeholder="Startup Name" class="border p-1 w-full mb-1">
+        <input type="text" placeholder="Pitch" class="border p-1 w-full mb-1">
+        <select class="border p-1 w-full mb-1">
+          <option>Category</option>
+          <option>Technology</option>
+          <option>Environment</option>
+          <option>Education</option>
+        </select>
+        <input type="email" placeholder="Email" class="border p-1 w-full mb-1">
+        <input type="url" placeholder="Website" class="border p-1 w-full mb-2">
+        <button type="submit" class="bg-blue-500 text-white px-3 py-1">Submit</button>
+      </form>
+    </div>
+
+    <!-- Search and Filter -->
+    <input class="border p-1 w-full mb-2" placeholder="Search...">
+    <select class="border p-1 w-full mb-4">
+      <option>All Categories</option>
+      <option>Technology</option>
+      <option>Environment</option>
+      <option>Education</option>
+    </select>
+
+    <!-- Cards -->
+    <div class="bg-white p-2 mb-2 border">
+      <h2 class="font-semibold">NoteHelp</h2>
+      <p class="text-sm">Website to share notes</p>
+      <p class="text-xs">Education</p>
+    </div>
+
+    <div class="bg-white p-2 mb-2 border">
+      <h2 class="font-semibold">TreeApp</h2>
+      <p class="text-sm">Plant trees by booking online</p>
+      <p class="text-xs">Environment</p>
+    </div>
+
+    <div class="bg-white p-2 mb-2 border">
+      <h2 class="font-semibold">EasyCode</h2>
+      <p class="text-sm">Simple courses for beginners</p>
+      <p class="text-xs">Technology</p>
+    </div>
+  </div>
+</body>
+</html>
