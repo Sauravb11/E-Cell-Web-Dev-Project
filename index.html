@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +5,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="bg-blue-100 text-blue-900 text-center p-4">
+<body class="bg-blue-100 text-blue-900 p-4">
 
-  <h1 class="text-2xl font-bold mb-4">Ecell Innovation Board</h1>
+  <h1 class="text-xl font-bold text-center mb-4">Ecell Innovation Board</h1>
 
   <div class="max-w-md mx-auto">
-    <input class="border rounded w-full  mb-3" placeholder="Search">
+    <input type="text" placeholder="Search" class="border  w-full mb-3 rounded">
 
-    <select class="border rounded w-full p-2 mb-6">
+    <select class="border p-2 w-full mb-4 rounded">
       <option>All</option>
       <option>Tech</option>
       <option>Social</option>
@@ -22,35 +21,36 @@
       <option>E-Commerce</option>
     </select>
     
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="space-y-4">
       <div class="bg-white p-3 rounded shadow">
         <h2 class="font-semibold">EduTech</h2>
         <p>Learning app</p>
-        <p class="text-sm">EdTech</p>
-        <a href="xyz1" class="text-blue-700 text-sm">View</a>
+        <p class="text-sm">Category: EdTech</p>
+        <a href="#" class="text-blue-600 text-sm">View</a>
       </div>
 
       <div class="bg-white p-3 rounded shadow">
         <h2 class="font-semibold">FarmConnect</h2>
         <p>For farmers</p>
-        <p class="text-sm">Social</p>
-        <a href="xyz2" class="text-blue-700 text-sm">View</a>
+        <p class="text-sm">Category: Social</p>
+        <a href="#" class="text-blue-600 text-sm">View</a>
       </div>
 
       <div class="bg-white p-3 rounded shadow">
         <h2 class="font-semibold">CodeBolt</h2>
         <p>Code together</p>
-        <p class="text-sm">Tech</p>
-        <a href="xyz3" class="text-blue-700 text-sm">View</a>
+        <p class="text-sm">Category: Tech</p>
+        <a href="#" class="text-blue-600 text-sm">View</a>
       </div>
     </div>
 
-    <div class="bg-white p-4 mt-8 rounded shadow">
-      <h2 class="text-lg font-bold underline mb-3">Submit Your Idea</h2>
-      <form class="space-y-1">
-        <input type="text" placeholder="Startup Name" class="border rounded w-full p-2">
-        <input type="text" placeholder="Describe Your Idea" class="border rounded w-full p-2">
-        <select class="border rounded w-full p-2">
+    <div class="bg-white p-4 mt-6 rounded shadow">
+      <h2 class="text-lg font-bold mb-3">Submit Your Idea</h2>
+      <form class="space-y-2">
+        <input type="text" placeholder="Startup Name" class="border p-2 w-full rounded">
+        <input type="text" placeholder="Describe Your Idea" class="border p-2 w-full rounded">
+        
+        <select class="border p-2 w-full rounded">
           <option>Select Category</option>
           <option>Tech</option>
           <option>Social</option>
@@ -58,9 +58,11 @@
           <option>FinTech</option>
           <option>E-Commerce</option>
         </select>
-        <input type="email" placeholder="Contact Email" class="border rounded w-full p-2">
-        <input type="url" placeholder="Website (optional)" class="border rounded w-full p-2">
-        <button type="submit" class="bg-blue-500 text-white rounded w-full p-2">Submit</button>
+        
+        <input type="email" placeholder="Contact Email" class="border p-2 w-full rounded">
+        <input type="url" placeholder="Website (optional)" class="border p-2 w-full rounded">
+
+        <button type="submit" class="bg-blue-500 text-white p-2 w-full rounded">Submit</button>
       </form>
     </div>
   </div>
