@@ -1,71 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ecell</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E‑Cell Innovation Board</title>
+
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="bg-blue-100 text-blue-900 p-4">
+<body class="bg-blue-100 text-blue-900 p-4 font-sans">
 
-  <h1 class="text-xl font-bold text-center mb-4">Ecell Innovation Board</h1>
 
-  <div class="max-w-md mx-auto">
-    <input type="text" placeholder="Search" class="border  w-full mb-3 rounded">
+<div class="max-w-3xl mx-auto mt-6 mb-4">
+  <div class="bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white flex flex-col items-center justify-center rounded text-center px-4 py-6">
+    <h1 class="text-3xl font-bold shadow-xl">  E‑Cell Innovation Board 🤖</h1>
+    <p class="text-1xl font-medium mt-2"> Your Vision, Our Launchpad🚀.</p>
+  </div>
+</div>
+  
+ <main id="app" class="max-w-3xl mx-auto space-y-10">
+   <section class="flex flex-col sm:flex-row gap-3">
+   <input  id="searchInput"  type="text"  placeholder="Search startups…"  class="border p-2 rounded w-full sm:flex-1"  />
+      <select    id="categorySelect"  class="border p-2 rounded">
+        <option value="All">All Categories</option>
+        <option value="Tech">Tech</option>
+        <option value="Social">Social</option>
+        <option value="EdTech">EdTech</option>
+        <option value="FinTech">FinTech</option>
+        <option value="E‑Commerce">E‑Commerce</option>
+      </select>
+    </section>
 
-    <select class="border p-2 w-full mb-4 rounded">
-      <option>All</option>
-      <option>Tech</option>
-      <option>Social</option>
-      <option>EdTech</option>
-      <option>FinTech</option>
-      <option>E-Commerce</option>
-    </select>
-    
-    <div class="space-y-4">
-      <div class="bg-white p-3 rounded shadow">
-        <h2 class="font-semibold">EduTech</h2>
-        <p>Learning app</p>
-        <p class="text-sm">Category: EdTech</p>
-        <a href="#" class="text-blue-600 text-sm">View</a>
+    <section id="listView">
+      <div id="cardContainer" class="space-y-4"></div>
+    </section>
+   
+    <section id="detailView" class="hidden">
+      <button  id="backBtn" class="mb-4 text-blue-600 hover:underline flex items-center gap-2">
+        &larr; back</button>
+      
+      <div class="bg-white p-5 rounded shadow">
+        <h2 id="detailName" class="text-xl font-bold mb-2"></h2>
+        <p id="detailPitch" class="mb-2"></p>
+        <p><strong>Category:</strong> <span id="detailCategory"></span></p>
+        <p><strong>Email:</strong> 
+          <a id="detailEmail" href="#" class="text-blue-600 hover:underline"></a>
+        </p>
+        <p><strong>Website:</strong> 
+          <a id="detailWebsite" href="#" target="_blank" class="text-blue-600 hover:underline"></a>
+        </p>
       </div>
+    </section>
 
-      <div class="bg-white p-3 rounded shadow">
-        <h2 class="font-semibold">FarmConnect</h2>
-        <p>For farmers</p>
-        <p class="text-sm">Category: Social</p>
-        <a href="#" class="text-blue-600 text-sm">View</a>
-      </div>
 
-      <div class="bg-white p-3 rounded shadow">
-        <h2 class="font-semibold">CodeBolt</h2>
-        <p>Code together</p>
-        <p class="text-sm">Category: Tech</p>
-        <a href="#" class="text-blue-600 text-sm">View</a>
-      </div>
-    </div>
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-lg font-bold mb-4">Submit Your Idea</h2>
+      <form id="submitForm" class="space-y-3" novalidate>
+        <input   id="inputName"  type="text"  placeholder="Startup Name"  class="border p-2 w-full rounded" required />  
 
-    <div class="bg-white p-4 mt-6 rounded shadow">
-      <h2 class="text-lg font-bold mb-3">Submit Your Idea</h2>
-      <form class="space-y-2">
-        <input type="text" placeholder="Startup Name" class="border p-2 w-full rounded">
-        <input type="text" placeholder="Describe Your Idea" class="border p-2 w-full rounded">
-        
-        <select class="border p-2 w-full rounded">
-          <option>Select Category</option>
-          <option>Tech</option>
-          <option>Social</option>
-          <option>EdTech</option>
-          <option>FinTech</option>
-          <option>E-Commerce</option>
+     <textarea     id="inputPitch"    placeholder="One‑liner Pitch"   class="border p-2 w-full rounded"  rows="2" required ></textarea> 
+
+       <select   id="inputCategory"  class="border p-2 w-full rounded"   require >
+
+         <option value="">Select Category</option>
+         <option value="Tech">Tech</option>
+         <option value="Social">Social</option>
+         <option value="EdTech">EdTech</option>
+         <option value="FinTech">FinTech</option>
+         <option value="E‑Commerce">E‑Commerce</option>
         </select>
         
-        <input type="email" placeholder="Contact Email" class="border p-2 w-full rounded">
-        <input type="url" placeholder="Website (optional)" class="border p-2 w-full rounded">
-
-        <button type="submit" class="bg-blue-500 text-white p-2 w-full rounded">Submit</button>
+        <input   id="inputEmail"  type="email" placeholder="Contact Email"  class="border p-2 w-full rounded"  required />
+       
+        <input   id="inputWebsite" type="url"  placeholder="Website (optional)" class="border p-2 w-full rounded" />
+     
+        <button  type="submit"  class="bg-blue-500 hover:bg-blue-600 text-white p-2 w-full rounded">
+         Submit
+        </button>
       </form>
-    </div>
-  </div>
+      
+      <p id="formMessage"  class="text-green-600 mt-3 hidden">
+        Thank you! We received your idea.
+      </p>
+    </section>
+    
+    <section class="bg-blue-900 text-white p-5 rounded shadow space-y-4 relative">
+   <a href="https://ecellnits.org/"  class="absolute top-20 right-20 ">
+    <img src="ecell.png" alt="E‑Cell Logo" class="h-32 w-32 object-cover rounded-full border-4  shadow-lg hover:scale-105 transition duration-300" />
+  </a>
 
+  <h2 class="text-2xl font-bold mb-3 text-left">Contact Us</h2>
+  <p class="flex  gap-12"><span>📞 Phone:</span> <a href="tel:+91999999999" class="underline">+91 9999999999</a></p>
+  <p class="flex  gap-14"><span>✉️ Email:</span> <a href="mailto:ecell@gmail.com" class="underline">ecell@gmail.com</a></p>
+  <p class="flex  gap-8"><span>📸 Instagram:</span> <a href="https://instagram.com/ecell.nit" target="_blank" class="underline">instagram</a></p>
+  <p class="flex  gap-10"><span>💼 LinkedIn:</span> <a href="https://www.linkedin.com/company/ecell-nit-silchar/posts/?feedView=all" target="_blank" class="underline">linkedin</a></p>
+  <p class="flex  gap-8"><span>📘 Facebook:</span> <a href="https://facebook.com/ecellnit" target="_blank" class="underline">facebook</a></p>
+</section>
+ </main>
+
+
+  <script src="index.js"></script>
 </body>
 </html>
