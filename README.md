@@ -1,25 +1,33 @@
-# Ecell Innovation Board
+# Ecell Innovation Board 
 
-This is a simple website I made using HTML and Tailwind CSS. It is for showing startup ideas on a board.
+This is a basic website I made using HTML, Tailwind CSS, and JavaScript. It is designed to showcase student startup ideas and is part of my E‑Cell recruitment process .
+
 
 ## What it has
 
-- A search bar (not working yet)
-- Dropdown to choose category
-- Some cards showing startup names
-- A form to submit your own idea (just design, not working)
+- Search bar to find startups by name or pitch
+- Dropdown to filter by category (like Tech, EdTech, etc.)
+- Startup cards (name, pitch, category)
+- Colored category badges:
+  ◦ Blue for EdTech
+  ◦ Green for Social
+  ◦ Purple for Tech
+- Click "View" to see more startup details (email, website)
+- Submission form with validation (just front-end, doesn’t save data)
+- Contact section with phone, email, Instagram, LinkedIn, Facebook
+- Responsive and mobile-friendly layout
 
-## Why I made it
-
-This is part of my progress submission. I am still learning and will add more features later.
 
 ## What I used
 
 - HTML
 - Tailwind CSS (CDN version)
+- JavaScript 
+- Logo image:ecell.png
+
 
 ## Note
 
-All the startup names used in this project (like EduSpark, FarmConnect, etc.) were taken from ChatGPT for example purposes.
+- The startup names like EduTech, FarmConnect, and CodeBolt are examples generated using ChatGPT.
+- I will improve it with backend and more real features in future versions.
 
-This is not the final version. I will make it better in the future.
