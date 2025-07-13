@@ -31,3 +31,7 @@ This is a basic website I made using HTML, Tailwind CSS, and JavaScript. It is d
 - The startup names like EduTech, FarmConnect, and CodeBolt are examples generated using ChatGPT.
 - I will improve it with backend and more real features in future versions.
 
+
+## Live Demo link
+
+click here to view the project : https://celadon-llama-512e88.netlify.app/
